@@ -118,6 +118,78 @@ section h2 {
     color: #ffffff;
 }
 
+/* Link do WhatsApp na seção de contato */
+.whatsapp-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #25d366; /* Cor do WhatsApp */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    color: #128c7e; /* Cor mais escura do WhatsApp para o hover */
+}
+
+/* Adiciona animação de fade-in nas seções */
+section {
+    opacity: 0;
+    transform: translateY(20px); /* Começa deslocado */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Quando as seções estão visíveis */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Seção do Time */
+#equipe {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+#equipe h2 {
+    color: #c62828;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.equipe-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar as imagens em mais de uma linha em telas pequenas */
+}
+
+.foto {
+    text-align: center;
+}
+
+.foto img {
+    width: 150px;  /* Tamanho fixo da imagem */
+    height: 150px; /* Tamanho fixo da imagem */
+    border-radius: 50%; /* Garantir que seja redonda */
+    object-fit: cover;  /* Garante que a imagem cubra o espaço sem distorcer */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.05);  /* Efeito de zoom ao passar o mouse */
+}
+
+.foto p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
 /* Rodapé */
 footer {
     text-align: center;
@@ -150,4 +222,79 @@ footer {
     footer {
         font-size: 0.8em;
     }
+}
+
+/* Botão Voltar ao Topo */
+.voltar-topo {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #c62828;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+/* Botão Voltar ao Topo */
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px;  /* Ajuste o padding para tornar o botão mais proporcional */
+    background-color: #c62828;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;  /* Isso já garante que será redondo */
+    cursor: pointer;
+    font-size: 1.4em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1002;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 60px;  /* Tamanho fixo para garantir que o botão fique redondo */
+    height: 60px; /* Tamanho fixo para garantir que o botão fique redondo */
+}
+
+/* Botão Voltar ao Topo no hover */
+.voltar-topo:hover {
+    background-color: #e53935;
+    transform: scale(1.1);
+}
+
+/* Animação do Menu */
+.menu {
+    transition: left 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da barra */
+    height: 10px; /* Altura da barra horizontal */
+}
+
+/* Estilo da parte que desliza */
+::-webkit-scrollbar-thumb {
+    background-color: #c62828; /* Cor do botão da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    border: 2px solid #ffffff; /* Borda branca para o botão */
+}
+
+/* Estilo da parte de fundo da barra */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor de fundo da barra de rolagem */
+    border-radius: 10px;
+}
+
+/* Estilo da barra de rolagem horizontal */
+::-webkit-scrollbar-horizontal {
+    height: 8px;
+}
+
+/* Estilo da parte que desliza horizontalmente */
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #c62828; /* Cor do botão da barra horizontal */
 }
