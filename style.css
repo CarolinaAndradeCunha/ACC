@@ -1,11 +1,9 @@
-/* Reset de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos gerais */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
@@ -33,15 +31,14 @@ header {
     position: relative;
     height: 70px;
     text-align: center;
-    overflow: hidden; /* <-- adicionei isso para o conteúdo não ultrapassar */
+    overflow: hidden;
 }
 
 header h1 {
     font-size: 1.8em;
-    margin-left: 40px; /* <-- add essa margem para o título ficar deslocado */
+    margin-left: 40px; 
 }
 
-/* Botão do menu */
 .menu-btn {
     position: absolute;
     left: 20px;
@@ -58,11 +55,10 @@ header h1 {
     z-index: 1001;
 }
 
-/* Menu lateral */
 .menu {
     position: fixed;
     top: 0;
-    left: -250px; /* Começa fora da tela */
+    left: -250px;
     background-color: #ffffff;
     width: 250px;
     height: 100%;
@@ -75,7 +71,7 @@ header h1 {
 }
 
 .menu.show {
-    left: 0; /* Quando abrir, move para a tela */
+    left: 0;
 }
 
 .menu a {
@@ -91,7 +87,6 @@ header h1 {
     color: #e53935;
 }
 
-/* Seções */
 section {
     padding: 40px 20px;
     max-width: 1000px;
@@ -104,7 +99,6 @@ section h2 {
     font-size: 1.6em;
 }
 
-/* Seção Contato */
 #contato {
     background-color: #c62828;
     color: #ffffff;
@@ -118,11 +112,10 @@ section h2 {
     color: #ffffff;
 }
 
-/* Link do WhatsApp na seção de contato */
 .whatsapp-link {
     display: inline-block;
     margin-top: 10px;
-    color: #25d366; /* Cor do WhatsApp */
+    color: #25d366;
     font-weight: bold;
     font-size: 1.1em;
     text-decoration: none;
@@ -130,23 +123,20 @@ section h2 {
 }
 
 .whatsapp-link:hover {
-    color: #128c7e; /* Cor mais escura do WhatsApp para o hover */
+    color: #128c7e;
 }
 
-/* Adiciona animação de fade-in nas seções */
 section {
     opacity: 0;
-    transform: translateY(20px); /* Começa deslocado */
+    transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Quando as seções estão visíveis */
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Seção do Time */
 #equipe {
     text-align: center;
     padding: 40px 20px;
@@ -164,7 +154,7 @@ section.visible {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Permite quebrar as imagens em mais de uma linha em telas pequenas */
+    flex-wrap: wrap;
 }
 
 .foto {
@@ -172,16 +162,16 @@ section.visible {
 }
 
 .foto img {
-    width: 150px;  /* Tamanho fixo da imagem */
-    height: 150px; /* Tamanho fixo da imagem */
-    border-radius: 50%; /* Garantir que seja redonda */
-    object-fit: cover;  /* Garante que a imagem cubra o espaço sem distorcer */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .foto img:hover {
-    transform: scale(1.05);  /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .foto p {
@@ -190,7 +180,6 @@ section.visible {
     color: #333;
 }
 
-/* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
@@ -199,11 +188,10 @@ footer {
     font-size: 0.9em;
 }
 
-/* Responsivo para celular */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.4em;
-        margin-left: 50px; /* aumenta a margem no celular para o ACC não ser coberto */
+        margin-left: 50px;
     }
 
     .menu-btn {
@@ -224,7 +212,6 @@ footer {
     }
 }
 
-/* Botão Voltar ao Topo */
 .voltar-topo {
     margin-top: 30px;
     display: inline-block;
@@ -239,62 +226,54 @@ footer {
     font-size: 1em;
 }
 
-/* Botão Voltar ao Topo */
 .voltar-topo {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    padding: 16px;  /* Ajuste o padding para tornar o botão mais proporcional */
+    padding: 16px;
     background-color: #c62828;
     color: #ffffff;
     font-weight: bold;
     border: none;
-    border-radius: 50%;  /* Isso já garante que será redondo */
+    border-radius: 50%;
     cursor: pointer;
     font-size: 1.4em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1002;
     transition: background-color 0.3s, transform 0.3s;
-    width: 60px;  /* Tamanho fixo para garantir que o botão fique redondo */
-    height: 60px; /* Tamanho fixo para garantir que o botão fique redondo */
+    width: 60px;
+    height: 60px;
 }
 
-/* Botão Voltar ao Topo no hover */
 .voltar-topo:hover {
     background-color: #e53935;
     transform: scale(1.1);
 }
 
-/* Animação do Menu */
 .menu {
     transition: left 0.3s ease-in-out, opacity 0.3s ease;
 }
 
-/* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 10px; /* Largura da barra */
-    height: 10px; /* Altura da barra horizontal */
+    width: 10px;
+    height: 10px;
 }
 
-/* Estilo da parte que desliza */
 ::-webkit-scrollbar-thumb {
-    background-color: #c62828; /* Cor do botão da barra de rolagem */
-    border-radius: 10px; /* Bordas arredondadas */
-    border: 2px solid #ffffff; /* Borda branca para o botão */
+    background-color: #c62828;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
 }
 
-/* Estilo da parte de fundo da barra */
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Cor de fundo da barra de rolagem */
+    background-color: #f1f1f1;
     border-radius: 10px;
 }
 
-/* Estilo da barra de rolagem horizontal */
 ::-webkit-scrollbar-horizontal {
     height: 8px;
 }
 
-/* Estilo da parte que desliza horizontalmente */
 ::-webkit-scrollbar-thumb:horizontal {
-    background-color: #c62828; /* Cor do botão da barra horizontal */
+    background-color: #c62828;
 }
