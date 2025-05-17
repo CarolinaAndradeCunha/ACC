@@ -1,0 +1,39 @@
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  color: #d00000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.card button {
+  width: 100%;
+}
