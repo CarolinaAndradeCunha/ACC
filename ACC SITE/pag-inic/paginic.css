@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome {
+  max-width: 600px;
+}
+
+.welcome h1 {
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #ff5a5a;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.buttons button {
+  min-width: 180px;
+}
