@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site com Seções Dinâmicas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+  </header>
+
+  <nav>
+    <button data-section="contabilidade" class="active">Contabilidade</button>
+    <button data-section="copiadora">Copiadora</button>
+    <button data-section="formulario">Formulário</button>
+    <button data-section="endereco">Endereço</button>
+  </nav>
+
+  <main>
+<section id="welcome" class="section active">
+  <h1>Bem-vindo ao nosso site!</h1>
+  <p>Escolha abaixo a seção que deseja visitar:</p>
+  <div class="welcome-buttons">
+    <button data-section="servicos">Serviços Contábeis</button>
+    <button data-section="copiadora">Copiadora</button>
+    <button data-section="equipe">Nossa Equipe</button>
+    <button data-section="contato">Fale Conosco</button>
+  </div>
+</section>
+
+    <section id="contabilidade" class="section contabilidade">
+      <h2>Contabilidade</h2>
+      <section class="services-section">
+        <h1>Serviços de Contabilidade</h1>
+        <div class="cards-container">
+
+          <article class="service-card">
+            <h2>Declaração de Imposto de Renda</h2>
+            <p>Auxiliamos você a fazer sua declaração anual com segurança e agilidade.</p>
+            <button onclick="window.open('imposto.html', '_blank')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Contabilidade para MEI</h2>
+            <p>Gerenciamento completo para Microempreendedores Individuais.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20ajuda%20com%20Contabilidade%20para%20MEI.%20Voc%C3%AA%20pode%20me%20ajudar%20e%20passar%20o%20or%C3%A7amento?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Abertura e Regularização de Empresas</h2>
+            <p>Orientação e serviços para abrir ou regularizar sua empresa.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20ajuda%20com%20Abertura%20e%20Regulariza%C3%A7%C3%A3o%20de%20Empresas.%20Voc%C3%AA%20pode%20me%20ajudar%20e%20passar%20o%20or%C3%A7amento?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Folha de Pagamento</h2>
+            <p>Gestão de folha com segurança e pontualidade.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20ajuda%20com%20Folha%20de%20Pagamento.%20Voc%C3%AA%20pode%20me%20ajudar%20e%20passar%20o%20or%C3%A7amento?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Consultoria Tributária</h2>
+            <p>Melhore a eficiência fiscal da sua empresa com nossos especialistas.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20ajuda%20com%20Consultoria%20Tribut%C3%A1ria.%20Voc%C3%AA%20pode%20me%20ajudar%20e%20passar%20o%20or%C3%A7amento?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Outros serviços</h2>
+            <p>Precisa de um serviço que não está aqui ou quer tirar dúvidas? Entre em contato conosco.</p>
+            <button onclick="window.open('https://wa.me/5511968449833')">Enviar mensagem</button>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <section id="copiadora" class="section copiadora">
+      <h2>Copiadora</h2>
+      <main class="main-content">
+        <h1>Serviços da Copiadora</h1>
+
+        <div class="cards-container">
+
+          <article class="service-card">
+            <h2>Impressão e Cópias</h2>
+            <p>Impressões coloridas e preto e branco com alta qualidade e rapidez.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20or%C3%A7amento%20para%20Impress%C3%A3o%20e%20C%C3%B3pias.%20Voc%C3%AA%20pode%20me%20ajudar?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Encadernação e Plastificação</h2>
+            <p>Serviços para proteger e valorizar seus documentos.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20or%C3%A7amento%20para%20Encaderna%C3%A7%C3%A3o%20e%20Plastifica%C3%A7%C3%A3o.%20Voc%C3%AA%20pode%20me%20ajudar?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Digitalização de Documentos</h2>
+            <p>Transforme documentos físicos em arquivos digitais de forma segura.</p>
+            <button onclick="window.open('https://wa.me/5511968449833?text=Oi,%20preciso%20de%20or%C3%A7amento%20para%20Digitaliza%C3%A7%C3%A3o%20de%20Documentos.%20Voc%C3%AA%20pode%20me%20ajudar?')">Pedir Orçamento</button>
+          </article>
+
+          <article class="service-card">
+            <h2>Outros serviços</h2>
+            <p>Precisa de outro serviço ou quer tirar dúvidas? Envie uma mensagem.</p>
+            <button onclick="window.open('https://wa.me/5511968449833')">Enviar mensagem</button>
+          </article>
+
+        </div>
+      </main>
+    </section>
+
+    <section id="formulario" class="section formulario">
+      <h2>Preencha seus dados</h2>
+      <div class="form-container">
+        <h1>Imposto de Renda</h1>
+        <p>Preencha os dados abaixo e entraremos em contato para fazer seu IR.</p>
+        <form id="formulario">
+          <label>Nome completo</label>
+          <input type="text" name="nome" required />
+
+          <label>CPF</label>
+          <input type="text" name="cpf" required />
+
+          <label>E-mail</label>
+          <input type="email" name="email" required />
+
+          <label>Telefone</label>
+          <input type="tel" name="telefone" required />
+
+          <label>Renda anual (R$)</label>
+          <input type="number" name="renda" required />
+
+          <label>Possui dependentes?</label>
+          <select name="dependentes" required>
+            <option value="">Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+
+          <label>Observações</label>
+          <textarea name="observacoes" rows="4" required></textarea>
+
+          <div class="botoes-envio">
+            <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+            <button type="button" onclick="enviarEmail()">Enviar por E-mail</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="endereco">
+      <h1>Endereço e Contato</h1>
+      <p><strong>Telefone:</strong> (11)968449833</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511968449833" target="_blank" rel="noopener noreferrer">Clique aqui para conversar</a></p>
+      <p><strong>Endereço:</strong> Av. Paraíso, 1036 - Oswaldo Cruz, São Caetano do Sul - SP</p>
+      <p><strong>Horário de funcionamento:</strong> Segunda a Sexta, 9h às 18h</p>
+      <p><strong>Horário de almoço:</strong> 12h às 13h30</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 ACC Assessoria Contábil e Prestação de Serviços | Todos os direitos reservados
+  </footer>
+
+  <script>script.js</script>
+
+</body>
+
+</html>
