@@ -1,0 +1,264 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+
+header {
+  background-color: #111;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #222;
+}
+
+nav button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+nav button:hover,
+nav button.active {
+  background-color: #444;
+}
+
+/* Seções */
+.section {
+  display: none;
+  padding: 2rem;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Títulos */
+h1,
+h2 {
+  margin-bottom: 1rem;
+  color: #c60000;
+}
+
+/* Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+.service-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  margin-bottom: 1rem;
+}
+
+.service-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #218838;
+}
+
+/* Formulário */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.botoes-envio {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.botoes-envio button {
+  flex: 1;
+  background-color: #28a745;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botoes-envio button:hover {
+  background-color: #218838;
+}
+
+/* Página de Boas-Vindas */
+#welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 80px); /* Deixa a altura quase total menos o rodapé */
+  background-color: #fff0f0; /* tom suave pra destacar */
+  text-align: center;
+}
+
+#welcome h1 {
+  font-size: 2.5rem;
+  color: #c60000;
+  margin-bottom: 1.5rem;
+}
+
+#welcome p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+#welcome .welcome-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.welcome-buttons button {
+  background-color: #c60000;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.welcome-buttons button:hover {
+  background-color: #a00000;
+}
+
+/* Responsividade da página inicial */
+@media (max-width: 600px) {
+  #welcome h1 {
+    font-size: 2rem;
+  }
+
+  #welcome p {
+    font-size: 1rem;
+  }
+
+  .welcome-buttons button {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* Endereço */
+#endereco {
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+#endereco p {
+  margin-bottom: 0.5rem;
+}
+
+#endereco a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+#endereco a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsividade extra */
+@media (max-width: 600px) {
+  nav button {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .botoes-envio {
+    flex-direction: column;
+  }
+}
