@@ -64,7 +64,7 @@ nav button.active {
   justify-content: center;
   padding: 4rem 2rem;
   min-height: calc(100vh - 80px);
-  background-color: #fff0f0;
+  background-color: #fff;
   text-align: center;
 }
 
