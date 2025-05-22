@@ -1,30 +1,25 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navButtons = document.querySelectorAll("nav button");
-  const welcomeButtons = document.querySelectorAll(".welcome-buttons button");
-  const sections = document.querySelectorAll(".section");
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("nav button, .welcome-buttons button");
+  const sections = document.querySelectorAll("main .section");
 
-  function showSection(sectionId) {
-    sections.forEach(sec => sec.classList.remove("active"));
-    document.getElementById(sectionId).classList.add("active");
-  }
-
-  navButtons.forEach(button => {
+  buttons.forEach(button => {
     button.addEventListener("click", () => {
-      const target = button.getAttribute("data-target");
-      showSection(target);
+      const target = button.getAttribute("data-section");
 
-      navButtons.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
-    });
-  });
+      // Remove classe "active" de todas as seções e botões
+      sections.forEach(section => section.classList.remove("active"));
+      document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
 
-  welcomeButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const target = button.getAttribute("data-target");
-      showSection(target);
+      // Adiciona "active" à seção e botão clicado
+      const section = document.getElementById(target);
+      if (section) {
+        section.classList.add("active");
+      }
 
-      navButtons.forEach(btn => btn.classList.remove("active"));
-      document.querySelector(`nav button[data-target="${target}"]`)?.classList.add("active");
+      // Adiciona "active" apenas se for botão de navegação
+      if (button.closest("nav")) {
+        button.classList.add("active");
+      }
     });
   });
 });
