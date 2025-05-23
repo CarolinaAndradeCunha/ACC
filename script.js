@@ -40,3 +40,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
   voltarParaBemVindo();
 });
+
+function coletarDadosFormulario() {
+    const form = document.getElementById('formulario');
+    const dados = {
+      nome: form.nome.value,
+      cpf: form.cpf.value,
+      email: form.email.value,
+      telefone: form.telefone.value,
+      renda: form.renda.value,
+      dependentes: form.dependentes.value,
+      observacoes: form.observacoes.value
+    };
+    return dados;
+  }
+
+  function enviarWhatsApp() {
+    const dados = coletarDadosFormulario();
+    const mensagem = `*Imposto de Renda - Solicitação*\n\n` +
+      `*Nome:* ${dados.nome}\n` +
+      `*CPF:* ${dados.cpf}\n` +
+      `*E-mail:* ${dados.email}\n` +
+      `*Telefone:* ${dados.telefone}\n` +
+      `*Renda Anual:* R$ ${dados.renda}\n` +
+      `*Possui Dependentes:* ${dados.dependentes}\n` +
+      `*Observações:* ${dados.observacoes}`;
+
+    const numero = '5511968449833';
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, '_blank');
+  }
+
+  function enviarEmail() {
+    const dados = coletarDadosFormulario();
+    const assunto = 'Solicitação de Imposto de Renda';
+    const corpo = `Olá,\n\nSegue os dados para solicitação do IR:\n\n` +
+      `Nome: ${dados.nome}\n` +
+      `CPF: ${dados.cpf}\n` +
+      `E-mail: ${dados.email}\n` +
+      `Telefone: ${dados.telefone}\n` +
+      `Renda Anual: R$ ${dados.renda}\n` +
+      `Possui Dependentes: ${dados.dependentes}\n` +
+      `Observações: ${dados.observacoes}`;
+
+    const link = `mailto:drica_acc@hotmail.com?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+    window.open(link, '_blank');
+  }
