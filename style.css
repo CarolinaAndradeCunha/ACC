@@ -51,10 +51,15 @@ nav button.active {
 .section {
   display: none;
   padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 .section.active {
   display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 #welcome {
