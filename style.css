@@ -303,38 +303,89 @@ footer {
 }
 
 /* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
   header {
-    justify-content: center;
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
   }
 
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .container-header {
-    flex-direction: column;
     gap: 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .logo {
-    font-size: 1.6rem;
-    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero {
-    flex-direction: column;
-    text-align: center;
+    padding: 32px 20px;
+    gap: 24px;
   }
 
-  .foto-ana {
-    margin-bottom: 24px;
+  .apresentacao-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-agendar {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .servicos {
+    padding: 24px;
+  }
+
+  .servicos h2,
+  .contato h2 {
+    font-size: 1.6rem;
+  }
+
+  .servicos li {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contato {
+    padding: 10px;
+  }
+
+  .contato input,
+  .contato textarea {
+    font-size: 0.95rem;
+  }
+
+  .contato button {
+    width: 100%;
+  }
+
+  .botoes-contato {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .botao-whatsapp,
+  .botao-email {
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 20px 12px;
   }
 }
-
 /* ===== ACESSIBILIDADE ===== */
 a:focus,
 button:focus {
