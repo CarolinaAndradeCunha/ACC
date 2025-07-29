@@ -45,9 +45,9 @@ header {
 }
 
 .container-header {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,7 +74,7 @@ header {
   object-fit: cover;
 }
 
-/* Ícone hambúrguer */
+/* ===== MENU HAMBÚRGUER ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -120,7 +120,7 @@ main {
   padding: 0 20px;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (contato principal) ===== */
 .hero {
   background-color: var(--cinza-suave);
   padding: 48px 32px;
@@ -147,10 +147,7 @@ main {
   margin: 8px 0;
 }
 
-.botoes-contato {
-  margin-top: 32px;
-}
-/* ===== SEÇÕES CONTABILIDADE E COPIADORA ===== */
+/* ===== SERVIÇOS ===== */
 .servicos {
   background-color: white;
   padding: 40px;
@@ -182,11 +179,10 @@ main {
   box-shadow: 0 0 5px rgba(0,0,0,0.03);
 }
 
-/* ===== ENDEREÇO, HORÁRIO ===== */
+/* ===== ENDEREÇO E HORÁRIO ===== */
 .endereco,
 .horario {
-  margin-top: 16px;
-  margin-bottom: 12px;
+  margin: 16px 0 12px;
   font-weight: 500;
   color: var(--preto-forte);
   display: flex;
@@ -204,12 +200,12 @@ main {
   font-size: 1.1rem;
 }
 
-/* ===== BOTOES CONTATO (WPP E EMAIL) ===== */
+/* ===== BOTÕES DE CONTATO ===== */
 .botoes-contato {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 24px;
+  margin-top: 32px;
   flex-wrap: wrap;
 }
 
@@ -228,6 +224,7 @@ main {
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   user-select: none;
+  justify-content: center;
 }
 
 .botao-whatsapp:hover,
@@ -255,26 +252,15 @@ footer {
   border-top: 4px solid var(--vermelho-principal);
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 480px) {
-  body {
-    padding: 8px;
-  }
+/* ===== ACESSIBILIDADE ===== */
+a:focus,
+button:focus {
+  outline: 2px solid var(--vermelho-principal);
+  outline-offset: 3px;
+}
 
-  header {
-    padding: 16px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .logo-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  @media (max-width: 768px) {
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
@@ -302,10 +288,22 @@ footer {
   }
 }
 
-  nav ul {
-    gap: 12px;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  header {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
   }
 
   .hero {
@@ -313,40 +311,21 @@ footer {
     gap: 24px;
   }
 
-  .apresentacao-texto h1 {
+  .hero h2 {
     font-size: 1.8rem;
-  }
-
-  .btn-agendar {
-    width: 100%;
-    font-size: 1rem;
   }
 
   .servicos {
     padding: 24px;
   }
 
-  .servicos h2,
-  .contato h2 {
+  .servicos h2 {
     font-size: 1.6rem;
   }
 
   .servicos li {
     font-size: 0.95rem;
     padding: 12px;
-  }
-
-  .contato {
-    padding: 10px;
-  }
-
-  .contato input,
-  .contato textarea {
-    font-size: 0.95rem;
-  }
-
-  .contato button {
-    width: 100%;
   }
 
   .botoes-contato {
@@ -357,7 +336,6 @@ footer {
 
   .botao-whatsapp,
   .botao-email {
-    justify-content: center;
     font-size: 0.95rem;
     padding: 12px;
   }
@@ -366,10 +344,4 @@ footer {
     font-size: 0.85rem;
     padding: 20px 12px;
   }
-}
-/* ===== ACESSIBILIDADE ===== */
-a:focus,
-button:focus {
-  outline: 2px solid var(--vermelho-principal);
-  outline-offset: 3px;
 }
