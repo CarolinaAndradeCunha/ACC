@@ -10,26 +10,38 @@
 </head>
 <body>
   <header>
-    <div class="container-header">
-      <div class="logo-area">
-        <img src="./assets/acc.jpeg" alt="Logo da Contabilidade" class="logo-img" />
-        <div class="logo reveal-on-scroll">ACC</div>
-      </div>
-      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-      <nav>
-        <ul class="reveal-on-scroll">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#contabilidade">Contabilidade</a></li>
-          <li><a href="#copiadora">Copiadora</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+  <div class="container-header">
+    <div class="logo-area">
+      <img src="./assets/acc.jpeg" alt="Logo da Contabilidade" class="logo-img" />
+      <div class="logo reveal-on-scroll">ACC</div>
     </div>
-  </header>
+
+    <!-- Botão hamburger -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+      ☰
+    </button>
+
+    <!-- Menu normal (desktop) -->
+    <nav class="nav-desktop">
+      <ul class="reveal-on-scroll">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#contabilidade">Contabilidade</a></li>
+        <li><a href="#copiadora">Copiadora</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu mobile -->
+    <nav class="nav-mobile" id="mobile-menu">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#contabilidade">Contabilidade</a></li>
+        <li><a href="#copiadora">Copiadora</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main>
     <section class="hero reveal-on-scroll" id="início">
