@@ -74,6 +74,25 @@ header {
   object-fit: cover;
 }
 
+/* Ícone hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  height: 3px;
+  background: var(--preto-forte);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 nav ul {
   display: flex;
   gap: 20px;
@@ -161,59 +180,6 @@ main {
   border-radius: 10px;
   font-weight: 500;
   box-shadow: 0 0 5px rgba(0,0,0,0.03);
-}
-
-/* ===== CONTATO ===== */
-.contato {
-  max-width: 600px;
-  margin: 0 auto 60px auto;
-  padding: 20px;
-}
-
-.contato h2 {
-  font-family: var(--fonte-titulo);
-  font-size: 2rem;
-  color: var(--preto-forte);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.contato form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.contato label {
-  font-weight: 600;
-}
-
-.contato input,
-.contato textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-family: var(--fonte-texto);
-  background-color: white;
-  font-size: 1rem;
-  resize: vertical;
-}
-
-.contato button {
-  padding: 14px;
-  background-color: var(--vermelho-principal);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 12px;
-  user-select: none;
-}
-
-.contato button:hover {
-  background-color: #c10000;
 }
 
 /* ===== ENDEREÇO, HORÁRIO ===== */
@@ -307,6 +273,34 @@ footer {
     width: 50px;
     height: 50px;
   }
+
+  @media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--off-white);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
 
   nav ul {
     gap: 12px;
