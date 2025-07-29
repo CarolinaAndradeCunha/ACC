@@ -41,7 +41,7 @@ section {
   padding: 60px 20px;
 }
 
-/* Menu */
+/* ===== HEADER E MENU ===== */
 header {
   background-color: var(--vermelho-principal);
   color: white;
@@ -49,6 +49,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+/* Imagem da logo */
+.logo-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 #hamburger-btn {
@@ -60,13 +70,46 @@ header {
   display: none;
 }
 
+/* Menu mobile - corrigido */
 #mobile-menu {
   display: none;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--cinza-suave);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.05);
+  z-index: 999;
+  width: 100%;
 }
 
+#mobile-menu.ativo {
+  display: block;
+}
+
+#mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#mobile-menu a {
+  color: var(--preto-forte);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+#mobile-menu a:hover {
+  color: var(--vermelho-principal);
+}
+
+/* Menu desktop */
 nav a {
   margin: 0 15px;
   font-weight: bold;
@@ -77,7 +120,7 @@ nav a:hover {
   color: var(--cinza-suave);
 }
 
-/* Cards de serviço */
+/* ===== SERVIÇOS ===== */
 .servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -104,7 +147,7 @@ nav a:hover {
   transform: scale(1.03);
 }
 
-/* Botão de WhatsApp */
+/* ===== BOTÃO WHATSAPP ===== */
 .btn-whatsapp {
   display: inline-block;
   margin-top: 20px;
@@ -121,7 +164,7 @@ nav a:hover {
   background-color: #1ebe5b;
 }
 
-/* Animação reveal */
+/* ===== ANIMAÇÃO REVEAL ===== */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(20px);
@@ -133,7 +176,7 @@ nav a:hover {
   transform: translateY(0);
 }
 
-/* Responsivo */
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
   #hamburger-btn {
     display: block;
@@ -141,12 +184,6 @@ nav a:hover {
 
   nav {
     display: none;
-  }
-
-  #mobile-menu {
-    display: flex;
-    background-color: var(--vermelho-principal);
-    padding: 10px 20px;
   }
 
   .servicos {
