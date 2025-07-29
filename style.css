@@ -103,47 +103,34 @@ main {
 
 /* ===== HERO ===== */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
   background-color: var(--cinza-suave);
   padding: 48px 32px;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.foto-ana {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
-}
-
-.apresentacao-texto h1 {
+.hero h2 {
   font-family: var(--fonte-titulo);
+  font-size: 2rem;
   color: var(--preto-forte);
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.btn-agendar {
-  background-color: #25d366;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  user-select: none;
+.hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 8px 0;
 }
 
-.btn-agendar:hover {
-  background-color: #1eb75b;
+.botoes-contato {
+  margin-top: 32px;
 }
-
 /* ===== SEÇÕES CONTABILIDADE E COPIADORA ===== */
 .servicos {
   background-color: white;
