@@ -4,7 +4,11 @@ const menu = document.getElementById("mobile-menu");
 
 if (btn && menu) {
   btn.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
+    menu.classList.toggle("active");
+    
+    // Atualiza o atributo de acessibilidade
+    const isOpen = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", String(!isOpen));
   });
 }
 
@@ -16,9 +20,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
-    // Fecha o menu mobile após o clique no link (mobile UX)
-    if (menu.classList.contains("ativo")) {
-      menu.classList.remove("ativo");
+    // Fecha o menu mobile após o clique no link
+    if (menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      btn.setAttribute("aria-expanded", "false");
     }
   });
 });
