@@ -1,8 +1,8 @@
-  const menuToggle = document.getElementById('menu-toggle');
-  const navList = document.querySelector('nav ul');
+  const btn = document.getElementById("hamburger-btn");
+  const menu = document.getElementById("mobile-menu");
 
-  menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
+  btn.addEventListener("click", () => {
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
   });
 
 // Scroll suave para links internos (menu)
