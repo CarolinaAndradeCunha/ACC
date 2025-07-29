@@ -1,9 +1,11 @@
-  const btn = document.getElementById("hamburger-btn");
-  const menu = document.getElementById("mobile-menu");
+const btn = document.getElementById("hamburger-btn");
+const menu = document.getElementById("mobile-menu");
 
+if (btn && menu) {
   btn.addEventListener("click", () => {
     menu.style.display = menu.style.display === "block" ? "none" : "block";
   });
+}
 
 // Scroll suave para links internos (menu)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -21,7 +23,6 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('reveal');
-      // Se quiser, para parar de observar depois que revelou:
       observer.unobserve(entry.target);
     }
   });
