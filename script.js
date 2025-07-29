@@ -1,3 +1,10 @@
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.querySelector('nav ul');
+
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
 // Scroll suave para links internos (menu)
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function(e) {
